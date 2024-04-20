@@ -1,0 +1,42 @@
+/* fonts */
+@font-face {
+    font-family: Inika;
+    src: url('../fonts/Inika/Inika-Regular.ttf');
+}
+
+@font-face {
+    font-family: IngridDarling;
+    src: url('../fonts/Ingrid_Darling/IngridDarling-Regular.ttf');
+}
+
+/* main */
+body {
+    background-color: #EEF2E6;
+    font-family: Inika;
+}
+
+#loader {
+    background-color: #EEF2E6;
+}
+
+/* main */
+header,
+nav,
+.search-input,
+.plan-box,
+.trainer-box,
+.article-box,
+.index-box,
+.content-header {
+    background-color: #D6CDA4;
+}
+
+/* logo */
+.fitness-logo {
+    font-family: Inika;
+}
+
+.fitness-logo span {
+    font-family: IngridDarling;
+    font-size: 3rem;
+}

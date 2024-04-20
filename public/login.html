@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness - Login</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section id="loader" class="flex fixed w-full h-full bg-white justify-center items-center text-3xl transition ease-in-out delay-500 opacity-1">Loading...</section>
+    <div class="fitness-logo">
+        <h1 class="text-3xl ml-5">
+            <span>F</span>itness
+        </h1>
+    </div>
+
+    <!-- Login section -->
+    <section>
+        <h1 class="text-center text-3xl mt-7">Login</h1>
+        <form method="get">
+            <div class="lg:w-1/3 md:w-2/3 sm:w-1/2 mt-5 flex flex-col justify-center items-center m-auto gap-2">
+                <div class="flex flex-row justify-center w-full">
+                    <div class="w-1/2">
+                        <input type="radio" name="role" id="member" value="member" class="appearance-none border-2 border-gray-600 w-8 h-4 rounded-2xl checked:bg-green-800 transition ease-in-out delay-50" checked>
+                        <label for="member" class="text-xl">Member</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="role" id="trainer" value="trainer" class="appearance-none border-2 border-gray-600 w-8 h-4 rounded-2xl checked:bg-green-800 transition ease-in-out delay-50">
+                        <label for="trainer" class="text-xl">Trainer</label>
+                    </div>
+                </div>
+                <div class="flex flex-col w-full">
+                    <label for="email" class="text-md">Email</label>
+                    <input type="email" name="email" id="email" class="h-8 p-2 text-lg rounded-lg focus:outline-none" />
+                </div>
+                <div class="flex flex-col w-full">
+                    <label for="password" class="text-md">Password</label>
+                    <input type="password" name="password" id="password" class="h-8 p-2 text-lg rounded-lg focus:outline-none" />
+                </div>
+                <div class="flex flex-col w-full">
+                    <button type="button" id="loginBtn" onclick="login()" class="mt-4 bg-green-800 p-3 text-gray-100 text-2xl rounded-2xl transition ease-in-out delay-50 hover:bg-green-700">
+                        Enter
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="text-center mt-4">
+            <p>Don't have an account ? <a href="signup.html" class="text-green-800 hover:text-green-600 transition ease-in-out delay-50">Join us!</a></p>
+        </div>
+        <div id="errorMessage" class="bg-red-200 mt-6 lg:w-1/3 sm:w-1/2 md:w-2/3 m-auto mb-7 rounded-2xl text-center p-2 hidden"></div>
+        <div id="successMessage" class="bg-green-400 mt-6 lg:w-1/3 sm:w-1/2 md:w-2/3 m-auto mb-7 rounded-2xl text-center p-2 hidden"></div>
+    </section>
+
+    <script src="js/requestHandler/requestHandler.js"></script>
+    <script src="js/componentsHandler/loadingHandler.js"></script>
+    <script src="js/componentsHandler/loginHandler.js"></script>
+</body>
+</html>

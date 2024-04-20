@@ -1,0 +1,20 @@
+/* fonts */
+@font-face {
+    font-family: CaveatBrush;
+    src: url('../fonts/Caveat_Brush/CaveatBrush-Regular.ttf');
+}
+
+/* header */
+.out {
+    font-family: CaveatBrush;
+    color: #D6CDA4;
+    text-shadow:
+    -1px -1px 0 #000,
+    0   -1px 0 #000,
+    1px -1px 0 #000,
+    1px  0   0 #000,
+    1px  1px 0 #000,
+    0    1px 0 #000,
+    -1px  1px 0 #000,
+    -1px  0   0 #000;
+}

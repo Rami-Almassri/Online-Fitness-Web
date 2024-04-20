@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Successful payment</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section id="loader" class="flex fixed w-full h-full bg-white justify-center items-center text-3xl transition ease-in-out delay-500 opacity-1">Loading...</section>
+
+    <nav class="flex flex-row p-6">
+        <div class="fitness-logo w-1/2">
+            <a class="text-3xl ml-5" href="home.html">
+                <span>F</span>itness
+            </a>
+        </div>
+        <div class="flex justify-end items-center w-1/2">
+            <ul class="flex flex-row gap-7 text-xl justify-right items-right">
+                <li><a href="trainers.html" id="nav-trainers">Trainers</a></li>
+                <li><a href="plans.html" id="nav-plans">Plans</a></li>
+                <li id="nav-login"><a href="profile.html">Profile</a></li>
+                <li id="nav-sign-out"><button id="sign-out">Sign out</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="flex flex-col w-3/4 m-auto mt-4 items-center justify-center text-3xl">
+        <section class="mt-9 p-24">
+            Your payment for <b id="successful-plan-title"></b> is successful
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="flex bg-green-700 text-white mt-20 p-10">
+        <div class="flex flex-col w-1/2">
+            <div class="fitness-logo w-1/2">
+                <h1 class="text-3xl">
+                    <span>F</span>itness
+                </h1>
+            </div>
+            <div>
+                <h1>
+                GETTING YOUR<br />
+                DREAMS OUT
+                </h1>
+            </div>
+            <div class="mt-5">
+                <h1><i class="fa-solid fa-phone mr-2 text-md"></i>+44 1632 960442</h1>
+                <h1><i class="fa-solid fa-map mr-2 text-md"></i>Camden Town, London</h1>
+            </div>
+        </div>
+        <div class="flex w-1/2 items-center justify-end">
+            <ul class="flex flex-col flex-row gap-1 text-md text-right justify-right items-right">
+                <li><a href="trainers.html">Trainers</a></li>
+                <li><a href="'plans.html">Plans</a></li>
+                <li><a href="#">About us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="js/componentsHandler/loadingHandler.js"></script>
+    <script src="js/requestHandler/requestHandler.js"></script>
+    <script src="js/modelsHandler/planHandler.js"></script>
+    <script src="js/pagesHandler/planPageHandler.js"></script>
+</body>
+</html>

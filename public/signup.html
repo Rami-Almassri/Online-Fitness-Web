@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a fitness member!</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section id="loader" class="flex fixed w-full h-full bg-white justify-center items-center text-3xl transition ease-in-out delay-500 opacity-1">Loading...</section>
+    <div class="fitness-logo">
+        <a class="text-3xl ml-5" href="home.html">
+            <span>F</span>itness
+        </a>
+    </div>
+
+    <!-- Sign-up section -->
+    <section>
+        <h1 class="text-center text-3xl mt-7">Sign up</h1>
+        <div class="role-choice flex flex-row w-full justify-center text-2xl mt-5">
+            <button id="as-member" class="bg-green-800 text-gray-300 p-10 rounded-l-md transition ease-in-out delay-100">Member</button>
+            <button id="as-trainer" class="bg-gray-300 text-green-800 p-10 rounded-r-md transition ease-in-out delay-100">Trainer</button>
+        </div>
+        <form method="get">
+            <div class="lg:w-1/3 md:w-2/3 sm:w-1/2 mt-5 flex flex-col justify-center items-center m-auto gap-2">
+                <div class="flex flex-col w-full">
+                    <label for="name" class="text-md">Name</label>
+                    <input type="text" name="name" id="name" class="h-8 p-2 text-lg rounded-lg focus:outline-none" />
+                </div>
+                <div class="flex flex-col w-full">
+                    <label for="username" class="text-md">Username</label>
+                    <input type="text" name="username" id="username" class="h-8 p-2 text-lg rounded-lg focus:outline-none" />
+                </div>
+                <div class="flex flex-col w-full">
+                    <label for="email" class="text-md">Email</label>
+                    <input type="email" name="email" id="email" class="h-8 p-2 text-lg rounded-lg focus:outline-none" />
+                </div>
+                <div class="flex flex-col w-full">
+                    <label for="password" class="text-md">Password</label>
+                    <input type="password" name="password" id="password" class="h-8 p-2 text-lg rounded-lg focus:outline-none" />
+                </div>
+                <div class="flex flex-col w-full">
+                    <button type="button" id="signupBtn" onclick="signup()" class="mt-4 bg-green-800 p-3 text-gray-100 text-2xl rounded-2xl transition ease-in-out delay-50 hover:bg-green-700">
+                        Join
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="text-center mt-4">
+            <p>Already have an account ? <a href="login.html" class="text-green-800 hover:text-green-600 transition ease-in-out delay-50">Login</a></p>
+        </div>
+        <div id="errorMessage" class="bg-red-200 mt-6 lg:w-1/3 md:w-2/3 m-auto mb-7 rounded-2xl text-center p-2 hidden"></div>
+        <div id="successMessage" class="bg-green-400 mt-6 lg:w-1/3 md:w-2/3 m-auto mb-7 rounded-2xl text-center p-2 hidden"></div>
+    </section>
+
+    <script src="js/requestHandler/requestHandler.js"></script>
+    <script src="js/componentsHandler/loadingHandler.js"></script>
+    <script src="js/componentsHandler/signupHandler.js"></script>
+</body>
+</html>
